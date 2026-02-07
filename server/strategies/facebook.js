@@ -1,7 +1,7 @@
 const passport = require("passport");
 const FacebookStrategy = require("passport-facebook").Strategy;
 const { getUser, createUser } = require("../services/authService");
-
+///update
 passport.use(
   new FacebookStrategy(
     {
@@ -39,8 +39,8 @@ passport.use(
         console.error("❌ Facebook login error:", err);
         return done(err, null);
       }
-    }
-  )
+    },
+  ),
 );
 
 passport.serializeUser((user, done) => done(null, user));
